@@ -1,0 +1,49 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(../assets/imagenes/fondo.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: azure;
+    margin: 0px;
+    margin-top: 10px;
+    min-height: 100vh;
+}
+
+/* se utilizo flex para poder hacer el pie de pagina, con una combinacion de bootstrap*/
+footer{
+    background-color: #111; 
+
+    .footerContainer{
+        width: 100%;
+        padding: auto;
+    }
+
+    .socialIcon{
+        display: flex;
+        justify-content: center;
+
+        a{
+            text-decoration: none;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 50%;
+
+            img{
+                height: 40px;
+                opacity: 0.9;
+            }
+        }
+    }
+
+    .fotterBottom p{
+        background-color: #111;
+        padding: 20px;
+    }
+}
+
+

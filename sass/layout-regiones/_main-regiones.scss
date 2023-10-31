@@ -1,0 +1,258 @@
+
+
+/*contenedor de toda la pagina*/
+
+.container{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "container-1"
+    "container-2"
+    "container-3"
+    "container-4"
+    ;
+
+    /*contenedor 1 de la primera parte (regiones de la serie pokemon)*/
+    .container-1{
+        grid-area: container-1;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+        "titulo titulo" 
+        "texto imagen"
+        ;
+
+        div h2{
+            grid-area: titulo;
+        }
+        
+        .text-1{
+            grid-area: texto;
+            padding: 20px;
+        }
+        
+        aside{
+            grid-area: imagen;
+        }
+    }
+
+    /*contenedor  de la parte de las regiones con sus iniciales*/
+    .container-2{
+        grid-area: container-2;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "container-2-1"
+        "container-2-2"
+        ;
+
+        .container-2-1{
+            grid-area: container-2-1;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+            "titulo titulo" 
+            "texto imagen"
+            ;
+        }
+        div h2{
+            grid-area: titulo;
+        }
+        
+        .text-2{
+            grid-area: texto;
+            padding: 20px;
+        }
+        
+        aside{
+            grid-area: imagen;
+        }
+
+        .container-2-2{
+            grid-area: container-2-2;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+            "titulo titulo" 
+            "imagen texto"
+            ;
+    
+            div h2{
+                grid-area: titulo;
+            }
+            
+            .text-3{
+                grid-area: texto;
+                padding: 20px;
+            }
+            
+            aside{
+                grid-area: imagen;
+            }
+        }
+    }
+
+    .container-3{
+        grid-area: container-3;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "container-2-1"
+        "container-2-2"
+        ;
+
+        .container-2-1{
+            grid-area: container-2-1;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+            "titulo titulo" 
+            "texto imagen"
+            ;
+
+            div h2{
+                grid-area: titulo;
+            }
+            
+            .text-2{
+                grid-area: texto;
+                padding: 20px;
+            }
+            
+            aside{
+                grid-area: imagen;
+            }
+        }
+
+        .container-2-2{
+            grid-area: container-2-2;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+            "titulo titulo" 
+            "imagen texto"
+            ;
+    
+            div h2{
+                grid-area: titulo;
+            }
+            
+            .text-3{
+                grid-area: texto;
+                padding: 20px;
+            }
+            
+            aside{
+                grid-area: imagen;
+            }
+        }
+    }
+
+    .container-4{
+        grid-area: container-4;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "container-2-1"
+        "container-2-2"
+        ;
+
+        .container-2-1{
+            grid-area: container-2-1;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+            "titulo titulo" 
+            "texto imagen"
+            ;
+
+            div h2{
+                grid-area: titulo;
+            }
+            
+            .text-2{
+                grid-area: texto;
+                padding: 20px;
+            }
+            
+            aside{
+                grid-area: imagen;
+            }
+        }
+
+        .container-2-2{
+            grid-area: container-2-2;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+            "titulo titulo" 
+            "imagen texto"
+            ;
+    
+            div h2{
+                grid-area: titulo;
+            }
+            
+            .text-3{
+                grid-area: texto;
+                padding: 20px;
+            }
+            
+            aside{
+                grid-area: imagen;
+            }
+        }
+    }
+    
+
+    aside img{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+}
+
+
+@media (min-width: 769px){
+
+    .container-1{
+        grid-area: container-1;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "titulo " 
+        "texto" 
+        "imagen";
+    }
+
+    .container-2-1{
+        grid-area: container-2-1;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "titulo" 
+        "texto"
+        "imagen";  
+    }
+
+    .container-2-2{
+        grid-area: container-2-2;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "titulo" 
+        "texto"
+        "imagen";  
+    }
+
+}
+
+

@@ -1,0 +1,562 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url(../assets/imagenes/fondo.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: azure;
+  margin: 0px;
+  margin-top: 10px;
+  min-height: 100vh;
+}
+
+/* se utilizo flex para poder hacer el pie de pagina, con una combinacion de bootstrap*/
+footer {
+  background-color: #111;
+}
+footer .footerContainer {
+  width: 100%;
+  padding: auto;
+}
+footer .socialIcon {
+  display: flex;
+  justify-content: center;
+}
+footer .socialIcon a {
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50%;
+}
+footer .socialIcon a img {
+  height: 40px;
+  opacity: 0.9;
+}
+footer .fotterBottom p {
+  background-color: #111;
+  padding: 20px;
+}
+
+.contenedorPokemon {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "titulo" "texto" "imagen";
+  place-items: center;
+  /*agregamos sombra al texto*/
+}
+.contenedorPokemon div {
+  margin-top: 55px;
+  grid-area: titulo;
+  text-align: center;
+  /*agregamos sombra al titulo*/
+}
+.contenedorPokemon div .white-with-black-shadow {
+  text-shadow: 1px 1px 2px black, 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+  color: white;
+}
+.contenedorPokemon .white-with-red-shadow {
+  padding: 40px;
+  text-shadow: 1px 1px 2px black, 0 0 1em rgb(239, 8, 8), 0 0 0.2em rgb(239, 8, 8);
+  color: white;
+}
+.contenedorPokemon aside {
+  grid-area: imagen;
+}
+.contenedorPokemon aside img {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+  .contenedorPokemon {
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "titulo titulo titulo" "texto imagen imagen";
+  }
+  .contenedorPokemon .white-with-red-shadow {
+    padding: 30px;
+  }
+  .contenedorPokemon aside img {
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 770px) and (max-width: 1024px) {
+  .contenedorPokemon {
+    grid-area: imagen;
+  }
+  .contenedorPokemon .white-with-red-shadow {
+    padding: 40px;
+  }
+  .contenedorPokemon aside {
+    display: flex;
+    width: 700px;
+    height: 430px;
+  }
+  .contenedorPokemon aside img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+  }
+  .contenedorPokemon aside img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+}
+@media (min-width: 1025px) {
+  .contenedorPokemon {
+    grid-area: imagen;
+  }
+  .contenedorPokemon .white-with-red-shadow {
+    padding: 40px;
+  }
+  .contenedorPokemon aside {
+    display: flex;
+    width: 1000px;
+    height: 430px;
+  }
+  .contenedorPokemon aside img {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: 0.5s ease;
+  }
+  .contenedorPokemon aside img:hover {
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+}
+.contenedorPokemon1 {
+  /*agregamos sombra al titulo*/
+  /*agregamos sombra al texto*/
+}
+.contenedorPokemon1 div {
+  text-align: center;
+}
+.contenedorPokemon1 div h2 {
+  margin-top: 55px;
+}
+.contenedorPokemon1 .white-with-black-shadow {
+  text-shadow: 1px 1px 2px black, 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+  color: white;
+}
+.contenedorPokemon1 .white-with-red-shadow {
+  padding: 40px;
+  text-shadow: 1px 1px 2px black, 0 0 1em rgb(239, 8, 8), 0 0 0.2em rgb(239, 8, 8);
+  color: white;
+}
+.contenedorPokemon1 .galeria1 {
+  display: flex;
+  overflow-y: auto;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contenedorPokemon1 .galeria1 .card {
+  margin-bottom: 20px;
+  position: relative;
+}
+.contenedorPokemon1 .galeria1 .card .cuerpo-card {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+.contenedorPokemon1 .galeria1 .card h5, .contenedorPokemon1 .galeria1 .card p {
+  margin: 0;
+}
+.contenedorPokemon1 .galeria1 .card img {
+  width: 300px;
+  object-fit: cover;
+  height: 450px;
+  margin: 10px;
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: 50px auto;
+  padding: 0 20px;
+  position: relative;
+}
+.wrapper .center-line {
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background: #f0ecec;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+}
+.wrapper .center-line .scroll-icon {
+  bottom: 0px;
+  left: 50%;
+  font-size: 25px;
+  transform: translateX(-50%);
+}
+.wrapper .row {
+  display: flex;
+}
+.wrapper .row section::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  background: #c42828;
+  top: 28px;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+.wrapper .row section {
+  background: #c42828;
+  border-radius: 5px;
+  width: calc(50% - 40px);
+  padding: 20px;
+  position: relative;
+}
+.wrapper .row section .icon, .wrapper .row section .center-line .scroll-icon {
+  position: absolute;
+  background: #c42828;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #020202;
+  font-size: 17px;
+  box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+.wrapper .row section .details, .wrapper .row section .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .row section .details .title {
+  font-size: 22px;
+  font-weight: 600;
+}
+.wrapper .row section p {
+  margin: 10px 0 17px 0;
+}
+.wrapper .row section .bottom a {
+  text-decoration: none;
+  background: #ff7979;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 5px;
+  /* font-size: 17px; */
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+.wrapper .row section .bottom a:hover {
+  transform: scale(0.97);
+}
+.wrapper .row-1 {
+  justify-content: flex-start;
+}
+.wrapper .row-1 section::before {
+  right: -7px;
+}
+.wrapper .row-1 section .icon {
+  top: 15px;
+  right: -60px;
+}
+.wrapper .row-2 {
+  justify-content: flex-end;
+}
+.wrapper .row-2 section::before {
+  left: -7px;
+}
+.wrapper .row-2 section .icon {
+  top: 15px;
+  left: -60px;
+}
+
+@media (max-width: 790px) {
+  .wrapper .center-line {
+    left: 40px;
+  }
+  .wrapper .row {
+    margin: 30px 0 3px 60px;
+  }
+  .wrapper .row section {
+    width: 100%;
+  }
+  .row-1 section::before {
+    left: -7px;
+  }
+  .row-1 section .icon {
+    left: -60px;
+  }
+}
+@media (max-width: 440px) {
+  .wrapper .center-line,
+  .row section::before,
+  .row section .icon {
+    display: none;
+  }
+  .wrapper .row {
+    margin: 10px 0;
+  }
+}
+.formu {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formu form {
+  padding: 50px 50px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  text-align: center;
+  width: 340px;
+  /*agregamos sombra al texto*/
+}
+.formu form h2 {
+  font-size: 35px;
+}
+.formu form .form-text {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  text-shadow: 1px 1px 2px black, 0 0 1em rgb(239, 8, 8), 0 0 0.2em rgb(239, 8, 8);
+  color: white;
+}
+.formu form .form-text p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.formu form .input-group {
+  display: flex;
+  flex-direction: column;
+}
+.formu form .input-group input, .formu form .input-group textarea {
+  padding: 20px 14px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  font-size: 15px;
+  color: black;
+}
+.formu form .input-group .btn {
+  background-color: rgb(221, 45, 45);
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+@media (min-width: 320) and (max-width: 720) {
+  main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main .input-group {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+  }
+}
+/*contenedor de toda la pagina*/
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "container-1" "container-2" "container-3" "container-4";
+  /*contenedor 1 de la primera parte (regiones de la serie pokemon)*/
+  /*contenedor  de la parte de las regiones con sus iniciales*/
+}
+.container .container-1 {
+  grid-area: container-1;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "titulo titulo" "texto imagen";
+}
+.container .container-1 div h2 {
+  grid-area: titulo;
+}
+.container .container-1 .text-1 {
+  grid-area: texto;
+  padding: 20px;
+}
+.container .container-1 aside {
+  grid-area: imagen;
+}
+.container .container-2 {
+  grid-area: container-2;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "container-2-1" "container-2-2";
+}
+.container .container-2 .container-2-1 {
+  grid-area: container-2-1;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "titulo titulo" "texto imagen";
+}
+.container .container-2 div h2 {
+  grid-area: titulo;
+}
+.container .container-2 .text-2 {
+  grid-area: texto;
+  padding: 20px;
+}
+.container .container-2 aside {
+  grid-area: imagen;
+}
+.container .container-2 .container-2-2 {
+  grid-area: container-2-2;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "titulo titulo" "imagen texto";
+}
+.container .container-2 .container-2-2 div h2 {
+  grid-area: titulo;
+}
+.container .container-2 .container-2-2 .text-3 {
+  grid-area: texto;
+  padding: 20px;
+}
+.container .container-2 .container-2-2 aside {
+  grid-area: imagen;
+}
+.container .container-3 {
+  grid-area: container-3;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "container-2-1" "container-2-2";
+}
+.container .container-3 .container-2-1 {
+  grid-area: container-2-1;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "titulo titulo" "texto imagen";
+}
+.container .container-3 .container-2-1 div h2 {
+  grid-area: titulo;
+}
+.container .container-3 .container-2-1 .text-2 {
+  grid-area: texto;
+  padding: 20px;
+}
+.container .container-3 .container-2-1 aside {
+  grid-area: imagen;
+}
+.container .container-3 .container-2-2 {
+  grid-area: container-2-2;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "titulo titulo" "imagen texto";
+}
+.container .container-3 .container-2-2 div h2 {
+  grid-area: titulo;
+}
+.container .container-3 .container-2-2 .text-3 {
+  grid-area: texto;
+  padding: 20px;
+}
+.container .container-3 .container-2-2 aside {
+  grid-area: imagen;
+}
+.container .container-4 {
+  grid-area: container-4;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "container-2-1" "container-2-2";
+}
+.container .container-4 .container-2-1 {
+  grid-area: container-2-1;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "titulo titulo" "texto imagen";
+}
+.container .container-4 .container-2-1 div h2 {
+  grid-area: titulo;
+}
+.container .container-4 .container-2-1 .text-2 {
+  grid-area: texto;
+  padding: 20px;
+}
+.container .container-4 .container-2-1 aside {
+  grid-area: imagen;
+}
+.container .container-4 .container-2-2 {
+  grid-area: container-2-2;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto;
+  grid-template-areas: "titulo titulo" "imagen texto";
+}
+.container .container-4 .container-2-2 div h2 {
+  grid-area: titulo;
+}
+.container .container-4 .container-2-2 .text-3 {
+  grid-area: texto;
+  padding: 20px;
+}
+.container .container-4 .container-2-2 aside {
+  grid-area: imagen;
+}
+.container aside img {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 769px) {
+  .container-1 {
+    grid-area: container-1;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "titulo" "texto" "imagen";
+  }
+  .container-2-1 {
+    grid-area: container-2-1;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "titulo" "texto" "imagen";
+  }
+  .container-2-2 {
+    grid-area: container-2-2;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "titulo" "texto" "imagen";
+  }
+}
+/* Se utilizo bootstrap para el index*/
+/*agregamos sombra al texto*/
+.white-with-red-shadow {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px black, 0 0 1em rgb(239, 8, 8), 0 0 0.2em rgb(239, 8, 8);
+  color: white;
+}
+
+/*agregamos sombra al titulo*/
+.white-with-black-shadow {
+  margin: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 2px black, 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */

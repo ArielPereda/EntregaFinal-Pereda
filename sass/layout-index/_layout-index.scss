@@ -1,0 +1,23 @@
+/* Se utilizo bootstrap para el index*/
+
+/*agregamos sombra al texto*/
+.white-with-red-shadow {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-shadow:
+      1px 1px 2px black,
+      0 0 1em rgb(239, 8, 8),
+      0 0 0.2em rgb(239, 8, 8);
+    color: white;
+}
+
+/*agregamos sombra al titulo*/
+.white-with-black-shadow {
+    margin: 20px;
+    text-align: center;
+    text-shadow:
+      1px 1px 2px black,
+      0 0 1em rgb(0, 0, 0),
+      0 0 0.2em rgb(0, 0, 0);
+    color: white;
+}
